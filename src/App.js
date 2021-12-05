@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
 import './App.css';
+import Server from './Server'
+
 
 function App() {
   return (
     <div className="App">
-      
+      <Server />
     </div>
   );
 }

@@ -8,18 +8,20 @@ export default function Server() {
     useEffect(() => {
         axios.get('http://localhost:8089/employee')
         .then(res => {
-            // setData(JSON.stringify(res))
-            console.log(res)
+            // console.log(res.data)
+            setData(res.data)
+            console.log("this is in success")
         })
         .catch(err => {
             console.log(err)
+            console.log("this is in error scope")
         })
     }, [])
 
     return (
         <div>
             <p>hello</p>
-            <p>{data}</p>
+            <p>{data.map(item => item)}</p>
         </div>
     )
 }
